@@ -1,0 +1,1 @@
+$id = $PAGE->get_content_id();

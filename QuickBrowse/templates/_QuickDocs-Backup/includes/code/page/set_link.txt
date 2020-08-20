@@ -1,0 +1,4 @@
+$page = 'home';
+$file = 'index.php';
+
+$PAGE->set_link(String $page, String $file);

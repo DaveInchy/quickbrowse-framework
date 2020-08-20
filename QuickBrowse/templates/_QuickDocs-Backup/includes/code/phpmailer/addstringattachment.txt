@@ -1,0 +1,11 @@
+$images = $DATA->data_read('images', Array('TYPE' => 'DATA_OLDEST'));
+foreach($images as $image){
+	$img_blob = $image['file_content'];
+	$img_extention = $image['file_extention'];
+	$img_id = $image['id'];
+}
+
+$filename = 'image_' . $img_id . '.' . $img_extention;
+$str = file_get_contents($img_blob);
+
+$MAIL->addStringAttachment(String $str, String $filename);

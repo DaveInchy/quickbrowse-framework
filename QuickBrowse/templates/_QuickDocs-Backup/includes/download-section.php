@@ -1,0 +1,16 @@
+<h2 class="<?php if($QB->PAGE->get_page(false) == 'index'){ echo 'text-light'; } ?>">Download</h2
+><p class="lead <?php if($QB->PAGE->get_page(false) == 'index'){ echo 'text-light'; } ?>">Want to create your own custom QuickBrowse Template?<br>Download <span class="font-weight-bold">QuickBrowse version release-3.0.0</span> and <span class="font-weight-bold">QuickTube version release-2.5.0</span> to get have an example for your own website.<br>Go to <a href="<?=$QUICKBROWSE->DOMAIN;?>/docs/"><?=$QUICKBROWSE->DOMAIN;?>/docs/</a> for more info and a documentation for each feature we offer.</p>
+
+<h3 class="m-0 mt-5 <?php if($QB->PAGE->get_page(false) == 'index'){ echo 'text-light'; } ?>">QuickBrowse</h3>
+<span class="<?php if($QB->PAGE->get_page(false) == 'index'){ echo 'text-light'; } ?>"><a class="wow pulse text-uppercase btn btn-md btn-danger font-weight-bold my-2 mr-2" href="<?=$QUICKBROWSE->DOMAIN;?>/download/QuickBrowse?v=latest">QuickBrowse</a> latest release</span>
+<span class="<?php if($QB->PAGE->get_page(false) == 'index'){ echo 'text-light'; } ?>"><a class="wow pulse text-uppercase btn btn-md btn-primary font-weight-bold my-2 mr-2 ml-5" href="<?=$QUICKBROWSE->DOMAIN;?>/download/QuickBrowse?v=release-3.4.2">QuickBrowse</a> release 3.4.2</span>
+<br>
+<span class="<?php if($QB->PAGE->get_page(false) == 'index'){ echo 'text-light'; } ?>"><a class="wow pulse text-uppercase btn btn-sm btn-primary font-weight-bold my-2 mr-2" href="<?=$QUICKBROWSE->DOMAIN;?>/download/QuickBrowse?v=release-3.3.8">QuickBrowse</a> release 3.3.8<span>
+<span class="<?php if($QB->PAGE->get_page(false) == 'index'){ echo 'text-light'; } ?>"><a class="wow pulse text-uppercase btn btn-sm btn-primary font-weight-bold my-2 mr-2 ml-5" href="<?=$QUICKBROWSE->DOMAIN;?>/download/QuickBrowse?v=release-3.1.3">QuickBrowse</a> release 3.1.3</span>
+
+<h3 class="m-0 mt-5 <?php if($QB->PAGE->get_page(false) == 'index'){ echo 'text-light'; } ?>">Templates</h3>
+<span class="<?php if($QB->PAGE->get_page(false) == 'index'){ echo 'text-light'; } ?>"><a class="wow pulse text-uppercase btn btn-md btn-danger font-weight-bold my-2 mr-2" href="<?=$QUICKBROWSE->DOMAIN;?>/download/QuickTube?v=release-2.5.0">QuickTube</a> release 2.5.0</span>
+<span class="<?php if($QB->PAGE->get_page(false) == 'index'){ echo 'text-light'; } ?>"><a class="wow pulse text-uppercase btn btn-md btn-danger font-weight-bold my-2 mr-2" href="<?=$QUICKBROWSE->DOMAIN;?>/download/GetStarted?v=release-1.1.2">GetStarted</a> release 1.1.2</span>
+<br>
+<span class="<?php if($QB->PAGE->get_page(false) == 'index'){ echo 'text-light'; } ?>"><a class="wow pulse text-uppercase btn btn-sm btn-primary font-weight-bold my-2 mr-2" href="<?=$QUICKBROWSE->DOMAIN;?>/download/QuickAPI?v=unavailable">QuickAPI</a> unavailable</span>
+<span class="<?php if($QB->PAGE->get_page(false) == 'index'){ echo 'text-light'; } ?>"><a class="wow pulse text-uppercase btn btn-sm btn-primary font-weight-bold my-2 mr-2 ml-5" href="<?=$QUICKBROWSE->DOMAIN;?>/download/QuickShop?v=unavailable">QuickShop</a> unavailable</span>

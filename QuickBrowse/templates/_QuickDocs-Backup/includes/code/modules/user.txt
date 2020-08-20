@@ -1,0 +1,11 @@
+$USER = new User();
+
+$USERS = $DATA->data_read('users', Array('TYPE' => 'DATA_NEWEST'));
+if($USER->is_logged_in() && (!isset($userdata) || empty($userdata)) ){
+	$userdata = Array();
+	foreach($USERS as $user){
+		if($USER->get_id() == $user['id']){
+			$userdata = $user;
+		}
+	}
+}

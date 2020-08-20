@@ -1,0 +1,18 @@
+{
+	"description": "Pre-configured composer.json for use with QuickBrowse 3.5.0+, No packages should be pre-installed with QuickBrowse because of licensing.",
+	"repositories": [
+        {
+            "type": "pear",
+            "url": "https://pear2.php.net"
+        },
+        {
+            "type": "composer",
+            "url": "https://packagist.org"
+        }
+    ],
+	"config": {
+		"vendor-dir": "./installed",
+		"optimize-autoloader": true
+	},
+	"prefer-stable": true
+}

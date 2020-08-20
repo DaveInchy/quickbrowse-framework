@@ -1,0 +1,1 @@
+$MAIL->isHTML(State $state);

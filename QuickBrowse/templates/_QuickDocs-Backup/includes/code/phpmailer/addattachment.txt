@@ -1,0 +1,1 @@
+$MAIL->addAttachment(String $path, String $filename = basename($path), String $encoding = 'base64', String $type = 'application/octet-stream');

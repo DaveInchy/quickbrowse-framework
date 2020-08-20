@@ -1,0 +1,277 @@
+/*- Min Width Below -----------------------------*/
+
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {  
+	h1, .display-1{
+		font-size: 3.75rem;
+	}
+	h2, .display-2{
+		font-size: 2.25rem;
+	}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  
+	h1, .display-1{
+		font-size: 4.5rem;
+	}
+	h2, .display-2{
+		font-size: 2.75rem;
+	}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+	h1, .display-1{
+		font-size: 5.25rem;
+	}
+	h2, .display-2{
+		font-size: 3.25rem;
+	}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+	h1, .display-1{
+		font-size: 6rem;
+	}
+	h2, .display-2{
+		font-size: 4rem;
+	}
+	
+	/* Width's */
+	.width-xl-10{
+		width: 100% !important;
+	}
+
+	.width-xl-9{
+		width: 90% !important;
+	}
+
+	.width-xl-8{
+		width: 80% !important;
+	}
+
+	.width-xl-7{
+		width: 70% !important;
+	}
+
+	.width-xl-6{
+		width: 60% !important;
+	}
+
+	.width-xl-5{
+		width: 50% !important;
+	}
+
+	.width-xl-4{
+		width: 40% !important;
+	}
+
+	.width-xl-3{
+		width: 30% !important;
+	}
+
+	.width-xl-2{
+		width: 20% !important;
+	}
+
+	.width-xl-1{
+		width: 10% !important;
+	}
+	/* Width's End */
+}
+
+/*- Max Width Below ---------- Min Width Above -*/
+
+/* Extra small devices (phones, 543px and down) */
+@media (max-width: 543px) {  
+	h1, .display-1{
+		font-size: 3rem;
+	}
+	h2, .display-2{
+		font-size: 1.75rem;
+	}
+	
+	/* Width's */
+	.width-xs-10{
+		width: 100% !important;
+	}
+
+	.width-xs-9{
+		width: 90% !important;
+	}
+
+	.width-xs-8{
+		width: 80% !important;
+	}
+
+	.width-xs-7{
+		width: 70% !important;
+	}
+
+	.width-xs-6{
+		width: 60% !important;
+	}
+
+	.width-xs-5{
+		width: 50% !important;
+	}
+
+	.width-xs-4{
+		width: 40% !important;
+	}
+
+	.width-xs-3{
+		width: 30% !important;
+	}
+
+	.width-xs-2{
+		width: 20% !important;
+	}
+
+	.width-xs-1{
+		width: 10% !important;
+	}
+	/* Width's End */
+}
+
+/* Small devices (landscape phones, 767px and down) */
+@media (max-width: 767px) {  
+	
+	/* Width's */
+	.width-sm-10{
+		width: 100% !important;
+	}
+
+	.width-sm-9{
+		width: 90% !important;
+	}
+
+	.width-sm-8{
+		width: 80% !important;
+	}
+
+	.width-sm-7{
+		width: 70% !important;
+	}
+
+	.width-sm-6{
+		width: 60% !important;
+	}
+
+	.width-sm-5{
+		width: 50% !important;
+	}
+
+	.width-sm-4{
+		width: 40% !important;
+	}
+
+	.width-sm-3{
+		width: 30% !important;
+	}
+
+	.width-sm-2{
+		width: 20% !important;
+	}
+
+	.width-sm-1{
+		width: 10% !important;
+	}
+	/* Width's End */
+}
+
+/* Medium devices (tablets, 991px and down) */
+@media (max-width: 991px) { 
+	
+	/* Width's */
+	.width-md-10{
+		width: 100% !important;
+	}
+
+	.width-md-9{
+		width: 90% !important;
+	}
+
+	.width-md-8{
+		width: 80% !important;
+	}
+
+	.width-md-7{
+		width: 70% !important;
+	}
+
+	.width-md-6{
+		width: 60% !important;
+	}
+
+	.width-md-5{
+		width: 50% !important;
+	}
+
+	.width-md-4{
+		width: 40% !important;
+	}
+
+	.width-md-3{
+		width: 30% !important;
+	}
+
+	.width-md-2{
+		width: 20% !important;
+	}
+
+	.width-md-1{
+		width: 10% !important;
+	}
+	/* Width's End */
+}
+
+/* Large devices (desktops, 1199px and down) */
+@media (max-width: 1199px) { 
+
+	/* Width's */
+	.width-lg-10{
+		width: 100% !important;
+	}
+
+	.width-lg-9{
+		width: 90% !important;
+	}
+
+	.width-lg-8{
+		width: 80% !important;
+	}
+
+	.width-lg-7{
+		width: 70% !important;
+	}
+
+	.width-lg-6{
+		width: 60% !important;
+	}
+
+	.width-lg-5{
+		width: 50% !important;
+	}
+
+	.width-lg-4{
+		width: 40% !important;
+	}
+
+	.width-lg-3{
+		width: 30% !important;
+	}
+
+	.width-lg-2{
+		width: 20% !important;
+	}
+
+	.width-lg-1{
+		width: 10% !important;
+	}
+	/* Width's End */
+}
+
+/*- Max Width Above -----------------------------*/

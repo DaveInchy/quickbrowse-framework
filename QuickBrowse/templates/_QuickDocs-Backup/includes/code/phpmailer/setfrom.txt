@@ -1,0 +1,1 @@
+$MAIL->setFrom(String $sender_email, String $sender_name);

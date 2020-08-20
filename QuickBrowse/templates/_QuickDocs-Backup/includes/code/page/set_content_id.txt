@@ -1,0 +1,3 @@
+$id = $dir[0];
+
+$PAGE->set_content_id(String $id);

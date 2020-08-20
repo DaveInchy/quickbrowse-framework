@@ -1,0 +1,562 @@
+/* --- HTML Overwrites --- */
+body{
+	background-image: url('../img/pattern/stripes.svg');
+	background-repeat: repeat;
+}
+
+header{
+	padding: 200px 0;
+	background: linear-gradient(135deg,#333333 25%,#303030 100%);
+	color: #fefefe !important;
+}
+
+section{
+  padding: 200px 0;
+  color: #333 !important;
+}
+/* --- HTML Overwrites End --- */
+
+/* --- HTML Custom Styling --- */
+table.list tr{
+	border: 0px solid white;
+	border-bottom: 1px solid #333;
+}
+
+table.list tr td{
+	background: none;
+	background-color: transparent;
+}
+
+pre{
+	padding: 10px;
+	width:100%;
+	overflow: scroll-y;
+	line-height:125%;
+	background-color: #333 !important;
+	color: #fefefe !important;
+	border-radius: 0.3rem;
+	border: 1px solid #fefefe;
+}
+
+pre > span.line::before{
+	/* Use data-line-number="01" to
+	ghost line-number for copying */
+	content: attr(data-line-number);
+	padding-right: 1em;
+	padding-left:0.5em;
+	text-align: right;
+	color: #fefefe !important;
+	opacity: 0.5;
+}
+/* --- HTML Custom Styling End --- */
+
+/* --- Backgrounds --- */
+.bg-chalkboard{
+	color: #fefefe !important;
+	background-image: url('../img/pattern/chalkboard.jpg');
+	background-repeat: repeat;
+}
+
+.bg-stripes{
+	color: #fefefe !important;
+	background-image: url('../img/pattern/stripes.svg');
+	background-repeat: repeat;
+}
+
+.bg-stars{
+	color: #fefefe !important;
+	background-image: url('../img/pattern/stars.svg');
+	background-repeat: repeat;
+}
+
+.bg-figures{
+	color: #fefefe !important;
+	background-image: url('../img/pattern/figures.png');
+	background-repeat: repeat;
+}
+
+.bg-triangles{
+	color: #fefefe !important;
+	background-image: url('../img/pattern/triangles.svg');
+	background-repeat: repeat;
+}
+
+.bg-gradient-dynamic{
+	background: linear-gradient(135deg, attr(bg-gradient-start) 25%, attr(bg-gradient-end) 100%);
+	background-image: attr(bg-img-url);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: #333 !important;
+	margin-top: -1px;
+	margin-bottom: -1px;
+}
+
+.bg-sharp-gradient-light{
+	background: linear-gradient(135deg,#fefefe 25%,#eeeeee 100%);
+	background-image: url('../img/background/sharp-gradient-light.svg');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: #333 !important;
+	margin-top: -1px;
+	margin-bottom: -1px;
+}
+
+.bg-sharp-gradient-dark{
+	background: linear-gradient(135deg,#333333 25%,#3e3e3e 100%);
+	background-image: url('../img/background/sharp-gradient-dark.svg');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: #fefefe !important;
+	margin-top: -1px;
+	margin-bottom: -1px;
+}
+
+.bg-sharp-gradient-purple{
+	background: linear-gradient(135deg,#351563 25%,#8C57D9 100%);
+	background-image: url('../img/background/sharp-gradient-purple.svg');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: #fefefe !important;
+	margin-top: -1px;
+	margin-bottom: -1px;
+}
+
+.bg-sharp-gradient-blue{
+	background: linear-gradient(135deg,#007bff 25%,#9999FF 100%);
+	background-image: url('../img/background/sharp-gradient-blue.svg');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: #fefefe !important;
+	margin-top: -1px;
+	margin-bottom: -1px;
+}
+
+.bg-sharp-gradient-red{
+	background: linear-gradient(135deg,#ff3548 25%,#f5ee74 100%);
+	background-image: url('../img/background/sharp-gradient-red.svg');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: #fefefe !important;
+	margin-top: -1px;
+	margin-bottom: -1px;
+}
+
+.bg-sharp-gradient-green{
+	background: linear-gradient(135deg,#11998e 25%,#38ef7d 100%);
+	background-image: url('../img/background/sharp-gradient-green.svg');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: #fefefe !important;
+	margin-top: -1px;
+	margin-bottom: -1px;
+}
+
+.bg-sharp-gradient-yellow{
+	background: linear-gradient(135deg,#f5ee74 25%,#bf7700 100%);
+	background-image: url('../img/background/sharp-gradient-yellow.svg');
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: #fefefe !important;
+	margin-top: -1px;
+	margin-bottom: -1px;
+}
+
+.bg-transparent{
+	background: none;
+	background-color: transparent;
+}
+
+.bg-light{
+	color: #333 !important;
+	background: #fefefe !important;
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+}
+
+.bg-dark{
+	color: #fefefe !important;
+	background: #333 !important;
+}
+
+.bg-space-light{
+	background: linear-gradient(135deg,#fefefe 25%,#eeeeee 100%);
+	background-image: url('../img/background/space.svg');
+	background-image: url('../img/background/space.svg'), linear-gradient(135deg,#fefefe 25%,#eeeeee 100%);
+	background-size: 100% 100%;
+	color: #333 !important;
+}
+
+.bg-space-dark{
+	background: linear-gradient(135deg,#333333 25%,#303030 100%);
+	background-image: url('../img/background/space.svg');
+	background-image: url('../img/background/space.svg'), linear-gradient(135deg,#333333 25%,#303030 100%);
+	background-size: 100% 100%;
+	color: #fefefe !important;
+}
+
+.bg-space-purple{
+	background: linear-gradient(135deg,#351563 25%,#8C57D9 100%);
+	background-image: url('../img/background/space.svg');
+	background-image: url('../img/background/space.svg'), linear-gradient(135deg,#351563 25%,#8C57D9 100%);
+	background-size: 100% 100%;
+	color: #fefefe !important;
+}
+
+.bg-space-blue{
+	background: linear-gradient(135deg, #007bff 25%, #9999FF 100%);
+	background-image: url('../img/background/space.svg');
+	background-image: url('../img/background/space.svg'), linear-gradient(135deg, #007bff 25%, #9999FF 100%);
+	background-size: 100% 100%;
+	color: #fefefe !important;
+}
+
+.bg-space-red{
+	background: linear-gradient(135deg,#ff3548 25%,#f5ee74 100%);
+	background-image: url('../img/background/space.svg');
+	background-image: url('../img/background/space.svg'), linear-gradient(135deg,#ff3548 25%,#f5ee74 100%);
+	background-size: 100% 100%;
+	color: #fefefe !important;
+}
+
+.bg-space-green{
+	background: linear-gradient(135deg,#11998e 25%,#38ef7d 100%);
+	background-image: url('../img/background/space.svg');
+	background-image: url('../img/background/space.svg'), linear-gradient(135deg,#11998e 25%,#38ef7d 100%);
+	background-size: 100% 100%;
+	color: #fefefe !important;
+}
+
+.bg-space-yellow{
+	background: linear-gradient(135deg,#f5ee74 25%,#bf7700 100%);
+	background-image: url('../img/background/space.svg');
+	background-image: url('../img/background/space.svg'), linear-gradient(135deg,#f5ee74 25%,#bf7700 100%);
+	background-size: 100% 100%;
+	color: #fefefe !important;
+}
+
+.bg-gradient-light{
+	background: linear-gradient(135deg,#fefefe 25%,#eeeeee 100%);
+	background-size: 100% 100%;
+	color: #333 !important;
+}
+
+.bg-gradient-dark{
+	background: linear-gradient(135deg,#333333 25%,#303030 100%);
+	background-size: 100% 100%;
+	color: #fefefe !important;
+}
+
+.bg-gradient-purple{
+	background: linear-gradient(135deg,#351563 25%,#8C57D9 100%);
+	background-size: 100% 100%;
+	color: #fefefe !important;
+}
+
+.bg-gradient-blue{
+	background: linear-gradient(135deg, #007bff 25%, #9999FF 100%);
+	background-size: 100% 100%;
+	color: #fefefe !important;
+}
+
+.bg-gradient-red{
+	background: linear-gradient(135deg,#ff3548 25%,#f5ee74 100%);
+	background-size: 100% 100%;
+	color: #fefefe !important;
+}
+
+.bg-gradient-green{
+	background: linear-gradient(135deg,#11998e 25%,#38ef7d 100%);
+	background-size: 100% 100%;
+	color: #fefefe !important;
+}
+
+.bg-gradient-yellow{
+	background: linear-gradient(135deg,#f5ee74 25%,#bf7700 100%);
+	background-size: 100% 100%;
+	color: #fefefe !important;
+}
+/* --- Backgrounds End --- */
+
+/* --- Positioning & Sizing --- */
+.fixed-top{
+	position: fixed;
+	top: 0px;
+}
+
+.column{
+	display: block !important;
+	position: relative !important;
+	float: left;
+}
+
+.center-2d-old{
+	position: relative;
+}
+.center-2d-old > div {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.center-1d{
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
+.center-2d{
+	padding: 0;
+	margin: 0;
+	display: grid !important;
+	place-items: center center;
+}
+
+.transparent-100{
+	opacity: 0;
+}
+
+.transparent-75{
+	opacity: 0.25;
+}
+
+.transparent-50{
+	opacity: 0.5;
+}
+
+.transparent-25{
+	opacity: 0.75;
+}
+
+.transparent-0{
+	opacity: 1;
+}
+
+.padding-y-50{
+	padding-top: 47vh;
+	padding-bottom: 47vh;
+}
+
+.padding-x-50{
+	padding-left: 47vw;
+	padding-right: 47vw;
+}
+
+.padding-y-40{
+	padding-top: 40vh;
+	padding-bottom: 40vh;
+}
+
+.padding-x-40{
+	padding-left: 40vw;
+	padding-right: 40vw;
+}
+
+.padding-y-30{
+	padding-top: 30vh;
+	padding-bottom: 30vh;
+}
+
+.padding-x-30{
+	padding-left: 30vw;
+	padding-right: 30vw;
+}
+
+.padding-y-20{
+	padding-top: 20vh;
+	padding-bottom: 20vh;
+}
+
+.padding-x-20{
+	padding-left: 20vw;
+	padding-right: 20vw;
+}
+
+.padding-y-10{
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+}
+
+.padding-x-10{
+	padding-left: 10vw;
+	padding-right: 10vw;
+}
+
+.padding-y-0{
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.padding-x-0{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.width-100{
+	width: 100vw !important;
+}
+
+.width-90{
+	width: 90vw !important;
+}
+
+.width-80{
+	width: 80vw !important;
+}
+
+.width-70{
+	width: 70vw !important;
+}
+
+.width-60{
+	width: 60vw !important;
+}
+
+.width-50{
+	width: 50vw !important;
+}
+
+.width-40{
+	width: 40vw !important;
+}
+
+.width-30{
+	width: 30vw !important;
+}
+
+.width-20{
+	width: 20vw !important;
+}
+
+.width-10{
+	width: 100% !important;
+}
+
+.width-9{
+	width: 90% !important;
+}
+
+.width-8{
+	width: 80% !important;
+}
+
+.width-7{
+	width: 70% !important;
+}
+
+.width-6{
+	width: 60% !important;
+}
+
+.width-5{
+	width: 50% !important;
+}
+
+.width-4{
+	width: 40% !important;
+}
+
+.width-3{
+	width: 30% !important;
+}
+
+.width-2{
+	width: 20% !important;
+}
+
+.width-1{
+	width: 10% !important;
+}
+
+.height-100{
+	height: 100vh !important;
+}
+
+.height-90{
+	height: 90vh !important;
+}
+
+.height-80{
+	height: 80vh !important;
+}
+
+.height-70{
+	height: 70vh !important;
+}
+
+.height-60{
+	height: 60vh !important;
+}
+
+.height-50{
+	height: 50vh !important;
+}
+
+.height-40{
+	height: 40vh !important;
+}
+
+.height-30{
+	height: 30vh !important;
+}
+
+.height-20{
+	height: 20vh !important;
+}
+
+.height-10{
+	height: 100% !important;
+}
+
+.height-9{
+	height: 90% !important;
+}
+
+.height-8{
+	height: 80% !important;
+}
+
+.height-7{
+	height: 70% !important;
+}
+
+.height-6{
+	height: 60% !important;
+}
+
+.height-5{
+	height: 50% !important;
+}
+
+.height-4{
+	height: 40% !important;
+}
+
+.height-3{
+	height: 30% !important;
+}
+
+.height-2{
+	height: 20% !important;
+}
+
+.height-1{
+	height: 10% !important;
+}
+/* --- Positioning & Sizing End --- */

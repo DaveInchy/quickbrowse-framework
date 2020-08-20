@@ -1,0 +1,36 @@
+{
+    "ADMINISTRATOR": {
+        "weight": 1000,
+        "color": "#333",
+        "opacity": "0.75",
+        "badge": "https://quickbrow.se/QuickBrowse/.src/assets/img/ranks/admin.png"
+    },
+    
+    "MODERATOR": {
+        "weight": 500,
+        "color": "#333",
+        "opacity": "0.65",
+        "badge": "https://quickbrow.se/QuickBrowse/.src/assets/img/ranks/moderator.png"
+    },
+    
+    "CONTRIBUTOR": {
+        "weight": 250,
+        "color": "#333",
+        "opacity": "0.5",
+        "badge": "https://quickbrow.se/QuickBrowse/.src/assets/img/ranks/contributor.png"
+    },
+    
+    "MEMBER": {
+        "weight": 50,
+        "color": "#333",
+        "opacity": "0.35",
+        "badge": "https://quickbrow.se/QuickBrowse/.src/assets/img/ranks/member.png"
+    },
+    
+    "INACTIVE": {
+        "weight": 0,
+        "color": "#333",
+        "opacity": "0.15",
+        "badge": "https://quickbrow.se/QuickBrowse/.src/assets/img/logo/logo.png"
+    }
+}

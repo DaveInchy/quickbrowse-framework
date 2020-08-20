@@ -1,0 +1,12 @@
+#!/bin/bash
+_NAME="packages";
+_HELP="[${_NAME}] Please use 'bash "'basedir $0'" <package>' to execute "'basename $0'".";
+
+# test for <package> argument
+[ -z ${1} ] && echo -e "$_HELP" && exit 1;
+
+# execute
+php ./bin/composer.phar require "${1}";
+
+# return exit status of execute
+exit $?;

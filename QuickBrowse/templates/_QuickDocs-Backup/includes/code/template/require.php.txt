@@ -1,0 +1,23 @@
+<?php
+
+//LOAD INCLUDED CLASSES FROM QUICKBROWSE
+
+	//INITIALIZE PHPMAILER AUTOLOADER
+	require_once($QUICKBROWSE->ROOT . '/php/handler/mail/autoload.php');
+	$MAIL = new PHPMailer();
+
+	//INITIALIZE YOUTUBE HANDLER
+	require_once($QUICKBROWSE->ROOT . '/php/handler/youtube.class.php');
+	$YOUTUBE = new Youtube($TEMPLATE->APIKEY);
+
+	//INITIALIZE USER HANDLER
+	require_once($QUICKBROWSE->ROOT . '/php/handler/user.class.php');
+	$USER = new User();
+
+//LOAD CUSTOM TEMPLATE CLASSES
+
+	//INITIALIZE FUNCTIONS
+	require_once($QUICKBROWSE->TEMPLATE_ROOT . '/php/functions.class.php');
+	$FUNCTIONS = new Functions();
+	
+?>

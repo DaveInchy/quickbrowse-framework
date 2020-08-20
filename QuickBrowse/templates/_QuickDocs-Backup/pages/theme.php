@@ -1,0 +1,1 @@
+<?=$QUICKBROWSE->ASSETS->PACKAGE->header();?>

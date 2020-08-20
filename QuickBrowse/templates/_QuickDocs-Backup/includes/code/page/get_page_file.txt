@@ -1,0 +1,9 @@
+$page = $QUICKBROWSE->TEMPLATE_ROOT . '/pages/' . $PAGE->get_page_file();
+$error = $QUICKBROWSE->TEMPLATE_ROOT . '/pages/error.php';
+
+if(file_exists($page)){
+	include_once($page);
+}else{
+	include_once($error);
+}
+

@@ -1,0 +1,11 @@
+#!/bin/bash
+_NAME="composer require package.";
+_HELP="Please use $0 <package>... to install a PHP package";
+if [ -z ${1} ]; then
+    echo -e "$_HELP";
+    exit 1;
+else
+    _CMD=$( php ./php/composer.phar require --prefer-stable "${1}" && echo $? );
+    exit $_CMD;
+fi
+exit 0;

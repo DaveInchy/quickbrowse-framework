@@ -1,0 +1,167 @@
+/* Transparent Navbar Classes */
+.navbar-collapse, .navbar-brand{
+	color: #eee !important;
+}
+
+.navbar-collapse.scrolled-false ul li a{
+	color: #eee !important;
+}
+
+.navbar-collapse.scrolled-true ul li a{
+	color: #333 !important;
+}
+
+.navbar-collapse ul li a.active{
+	color: #afafaf !important;
+}
+
+.navbar-collapse ul li a:hover{
+	color: #aeaeae !important;
+}
+
+.navbar-brand.scrolled-false{
+	color: #eee !important;
+}
+
+.navbar-brand.scrolled-true{
+	color: #333 !important;
+}
+
+.navbar .dropdown-menu a.dropdown-item{
+	color: #333 !important;
+}
+
+.navbar .dropdown-menu .dropdown-divider{
+	border-top: 1px solid #333 !important;
+}
+
+/*------- Animations -------*/
+.nav-fade-in{
+	-webkit-animation: nav-fade-in 0.5s;
+	-moz-animation: nav-fade-in 0.5s;
+	-ms-animation: nav-fade-in 0.5s;
+	-o-animation: nav-fade-in 0.5s;
+	animation: nav-fade-in 0.5s;
+	background-color: rgba(255, 255, 255, 1);
+	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+}
+
+.nav-fade-out{
+	-webkit-animation: nav-fade-out 0.5s;
+	-moz-animation: nav-fade-out 0.5s;
+	-ms-animation: nav-fade-out 0.5s;
+	-o-animation: nav-fade-out 0.5s;
+	animation: nav-fade-out 0.5s;
+	background-color: rgba(255, 255, 255, 0);
+}
+
+@keyframes nav-fade-in {
+    from { background-color: rgba(255, 255, 255, 0); }
+    to   { 
+		background-color: rgba(255, 255, 255, 1);
+		-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+		-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+	}
+}
+
+/* Firefox < 16 */
+@-moz-keyframes nav-fade-in {
+    from { background-color: rgba(255, 255, 255, 0); }
+    to   { 
+		background-color: rgba(255, 255, 255, 1);
+		-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+		-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+	}
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes nav-fade-in {
+    from { background-color: rgba(255, 255, 255, 0); }
+    to   { 
+		background-color: rgba(255, 255, 255, 1);
+		-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+		-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+	}
+}
+
+/* Internet Explorer */
+@-ms-keyframes nav-fade-in {
+    from { background-color: rgba(255, 255, 255, 0); }
+    to   { 
+		background-color: rgba(255, 255, 255, 1);
+		-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+		-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+	}
+}
+
+/* Opera < 12.1 */
+@-o-keyframes nav-fade-in {
+    from { background-color: rgba(255, 255, 255, 0); }
+    to   { 
+		background-color: rgba(255, 255, 255, 1);
+		-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+		-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+	}
+}
+
+@keyframes nav-fade-out {
+    from { 
+		background-color: rgba(255, 255, 255, 1);
+		-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+		-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+	}
+    to   { background-color: rgba(255, 255, 255, 0); }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes nav-fade-out {
+    from { 
+		background-color: rgba(255, 255, 255, 1);
+		-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+		-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+	}
+    to   { background-color: rgba(255, 255, 255, 0); }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes nav-fade-out {
+    from { 
+		background-color: rgba(255, 255, 255, 1);
+		-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+		-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+	}
+    to   { background-color: rgba(255, 255, 255, 0); }
+}
+
+/* Internet Explorer */
+@-ms-keyframes nav-fade-out {
+    from { 
+		background-color: rgba(255, 255, 255, 1);
+		-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+		-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+	}
+    to   { background-color: rgba(255, 255, 255, 0); }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes nav-fade-out {
+    from { 
+		background-color: rgba(255, 255, 255, 1);
+		-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+		-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+	}
+    to   { background-color: rgba(255, 255, 255, 0); }
+}
+/*----- Animations End -----*/

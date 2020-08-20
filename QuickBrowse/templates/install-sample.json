@@ -1,0 +1,37 @@
+{
+	"SETTINGS":
+	{
+		
+		"VERSION": "1.1.1",
+		"RELEASE": "r-003",
+		"TITLE": "QuickBrowse Example Template",
+		"DESCRIPTION": "This is an example template for QuickBrowse, use $QB->TEMPLATE->TITLE to get the title for this template.",
+
+		"AUTHOR": "D. van Dooijeweert",
+		"AUTHOR_URL": "http://doonline.nl/download/example-template?ext=zip",
+		"EMAIL": "contact@doonline.nl",
+
+		"INFO": "All settings above are REQUIRED... Because QuickBrowse uses them to call for some data live template version.",
+		"MORE": "The setting 'INFO', '', '' and everything below are NOT REQUIRED for QuickBrowse.",
+		"ALSO": "There's a SETTINGS part and REQUIRED part to this install.json file, Make sure you use appropriate settings for the 'REQUIRED' part.",
+		"DOWNLOAD": "http://quickbrow.se/download/example-template?ext=zip"
+		
+	},
+	"REQUIRED": {
+
+		"MIN_VERSION": "3.4.9",
+		"MAX_VERSION": "3.5.0",
+
+		"DATABASE":
+		{
+			"TYPE": "mysql",
+			"FILE": "database.sql"
+		},
+	    
+		"PACKAGES": {
+			"phpmailer/phpmailer": "v6.1.4",
+			"mollie/mollie-api-php": "v2.12.1"
+		}
+
+	}
+}

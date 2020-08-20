@@ -1,0 +1,9 @@
+{
+    "VERSION": "1.0.0",
+    "RELEASE": "r-1.0",
+    
+    "REQUIRED": {
+		    "MIN_VERSION": "3.4.7",
+		    "MAX_VERSION": "3.5.0"
+    }
+}

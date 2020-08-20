@@ -1,0 +1,8 @@
+<?php
+$filename = 'attachedImage_1.jpg';
+$cid = 'image_1';
+
+$MAIL->addEmbeddedImage(String $filename, String $cid);
+?>
+
+<img src="cid:image_1" alt="Some image about a beautiful fat drumsticklez called Mr Mojo.">

@@ -1,0 +1,8 @@
+$result = $MAIL->send();
+
+if(!$result) {
+	$FUNCTIONS->INFO = 'Couldn't complete: sending $MAIL.';
+	$FUNCTIONS->ERROR = $MAIL->ErrorInfo;
+}
+
+echo($FUNCTIONS->ERROR);
