@@ -88,6 +88,9 @@ class Assets{
 		),
 		'img/background/' => Array
 		(
+			
+			'space.svg',
+			
 			'mountains-blue.svg',
 			'mountains-dark.svg',
 			'mountains-green.svg',
@@ -103,8 +106,6 @@ class Assets{
 			'sharp-gradient-purple.svg',
 			'sharp-gradient-red.svg',
 			'sharp-gradient-yellow.svg',
-			
-			'space.svg',
 			
 			'tile-blue.svg',
 			'tile-dark.svg',
@@ -125,15 +126,14 @@ class Assets{
 		'img/logo/' => Array
 		(
 			'logo.png',
-
+			
 			'logo-doonline-sm.png',
 			'logo-webbouwerz-sm.png',
+			
 			'logo-bootstrap-sm.png',
 			'logo-bootswatch-sm.png',
-
 			'logo-bootswatch-lg.png',
 			'logo-bootstrap-lg.png',
-			'logo-doonline-lg.jpg',
 		)
 	);
 
