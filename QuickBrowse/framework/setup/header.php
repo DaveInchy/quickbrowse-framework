@@ -48,11 +48,12 @@ try{
 		//useful: https://www.php.net/manual/en/function.chdir.php
 		//useful: https://www.php.net/manual/en/function.getcwd.php
 		//useful: https://www.php.net/manual/en/function.shell-exec.php
+		//@NOTICE 6. PDO Functionality is somewhat wonky, try using mysql if you can.
 		
-		//Required Packages
-		'select-packages',
-		'install-packages',
-		'result-packages',
+		//Required Packages --> Currently de-activated since it's not finished
+		//'select-packages',
+		//'install-packages',
+		//'result-packages',
 		
 		//Finish setup and display setup results
 		'finish-tp-setup',

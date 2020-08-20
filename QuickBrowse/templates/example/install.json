@@ -2,8 +2,8 @@
 	"SETTINGS":
 	{
 		
-		"VERSION": "1.1.1",
-		"RELEASE": "r-003",
+		"VERSION": "20.08.20",
+		"RELEASE": "3.5.0",
 		"TITLE": "QuickBrowse Example Template",
 		"DESCRIPTION": "This is an example template for QuickBrowse, use $QB->TEMPLATE->TITLE to get the title for this template.",
 

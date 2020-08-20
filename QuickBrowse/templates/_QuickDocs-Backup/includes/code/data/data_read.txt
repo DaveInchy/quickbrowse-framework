@@ -1,5 +1,0 @@
-$args['TYPE'] = 'DATA_NEWEST_OFFSET';
-$args['LIMIT'] = '4';
-$args['OFFSET'] = $args['LIMIT'] * $_GET['index'];
-
-$data = $DATA->data_read(String $table, Array $args);

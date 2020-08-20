@@ -1,11 +1,11 @@
 <?php
 	
-	//PRODUCT: 			QuickBrowse web-development Framework
-	//COPYRIGHT: 		2016-2020 doOnline
+	//PRODUCT: 			QuickBrowse Web-Development Framework
+	//COPYRIGHT: 		DaDavinci (C) 2016-2020
 	//WEBSITE:			https://QuickBrow.se
 	
-	//AUTHOR: 			D. Dooijeweert (https://doOnline.nl)
-	//CONTRIBUTED:		D. Ronca (https://webbouwerz.nl)
+	//AUTHOR: 			D. Dooijeweert contact@cloudworks.cf
+	//CONTRIBUTED:		D. Ronca https://webbouwerz.nl/contact
 
 	//LICENSE: 			QuickBrowse/LICENSE
 	//EULA:				QuickBrowse/EULA

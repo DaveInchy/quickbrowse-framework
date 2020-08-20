@@ -1,3 +1,0 @@
-$page = $PAGE->get_page_name();
-
-echo($page);

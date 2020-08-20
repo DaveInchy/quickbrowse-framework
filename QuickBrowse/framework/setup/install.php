@@ -226,13 +226,13 @@
 				  <div class="col-md-4">
 				  <div class="radio ml-3">
 					<label for="use_pdo-0">
-					  <input type="radio" name="use_pdo" id="use_pdo-0" value="true" checked="checked">
+					  <input type="radio" name="use_pdo" id="use_pdo-0" value="false" disabled>
 					  Use PDO
 					</label>
 					</div>
 				  <div class="radio ml-3">
 					<label for="use_pdo-1">
-					  <input type="radio" name="use_pdo" id="use_pdo-1" value="false">
+					  <input type="radio" name="use_pdo" id="use_pdo-1" value="true" checked>
 					  Use MySQLi
 					</label>
 					</div>

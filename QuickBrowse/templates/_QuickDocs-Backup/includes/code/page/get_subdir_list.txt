@@ -1,1 +1,0 @@
-$PAGE->get_subdir_list();

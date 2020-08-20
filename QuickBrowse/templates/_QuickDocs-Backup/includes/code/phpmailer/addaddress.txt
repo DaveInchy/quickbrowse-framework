@@ -1,1 +1,0 @@
-$MAIL->addAddress(String $reciever_email, String $reciever_name);

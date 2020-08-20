@@ -1,5 +1,0 @@
-$subdir_data 	= $PAGE->get_subdir_data();
-$dir 		= $subdir_data['dir'];
-$path 		= $subdir_data['path'];
-$dir_length 	= $subdir_data['length'];
-$page 		= $dir[0];

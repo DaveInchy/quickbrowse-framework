@@ -1,6 +1,0 @@
-$id = $_GET['id'];
-
-if(!$DATA->data_delete(String $table, Int $id){
-	echo('[INFO]' . $DATA->INFO . '<br>');
-	echo('[ERROR] '$DATA->ERROR);
-}
