@@ -235,7 +235,7 @@ class Database{
 		
 		if($this->USE_PDO){
 			$prep = $CONNECTION->prepare(
-			"UPDATE :table SET :column = :input WHERE id = :id;"
+			"UPDATE `:table` SET `:column` = ':input' WHERE `id` = :id;"
 			, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 		}
 		
@@ -244,7 +244,7 @@ class Database{
 			$COLUMN = $KEY;
 			
 			if(!$this->USE_PDO){
-				$QUERY = "UPDATE " . $TABLE . " SET " . $COLUMN . " = " . mysqli_real_escape_string($CONNECTION, $INPUT) . " WHERE id = '" . $ID . "'; ";
+				$QUERY = "UPDATE `" . $TABLE . "` SET `" . $COLUMN . "` = '" . mysqli_real_escape_string($CONNECTION, $INPUT) . "' WHERE `id` = '" . $ID . "'; ";
 				if(!$CONNECTION->query($QUERY)){
 					$this->ERROR = $this->ERROR . "Failed to query update for: " . $ID . ".\n " . $CONNECTION->error . ".\n";
 					return false;
