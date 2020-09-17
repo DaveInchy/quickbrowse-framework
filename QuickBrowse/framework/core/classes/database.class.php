@@ -235,7 +235,7 @@ class Database{
 		
 		if($this->USE_PDO){
 			$prep = $CONNECTION->prepare(
-			"UPDATE `:table` SET `:column` = ':input' WHERE `id` = :id;"
+			"UPDATE `:table` SET `:column` = ':input' WHERE `id` = ':id';"
 			, array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
 		}
 		
@@ -267,7 +267,7 @@ class Database{
 		
 		$CONNECTION = $this->CONN;
 		
-		$QUERY = "DELETE FROM " . $TABLE . " WHERE id = " . $ID;
+		$QUERY = "DELETE FROM `" . $TABLE . "` WHERE `id` = '" . $ID . "'; ";
 		if(!$CONNECTION->query($QUERY)) {
 			if(!$this->USE_PDO){
 				$this->ERROR = $this->ERROR . "Failed to query delete for: " . $ID . ".\n " . $CONNECTION->error . ".\n";
