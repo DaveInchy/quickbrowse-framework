@@ -3,7 +3,7 @@ class QuickBrowseSettings{
 	
 	//QuickBrowse Settings.
 	public $VERSION = "3.5.0";
-	public $PREFIX = "alpha:08-20-2K20";
+	public $PREFIX = "beta:28-09-20";
 	public $REPORT = true;
 	
 	//License Argreement
