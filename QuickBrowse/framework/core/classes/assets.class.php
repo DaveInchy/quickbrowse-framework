@@ -252,20 +252,551 @@ class Package{
 		return true;
 	}
 	
+	function template_icons_set(){
+		if(
+			isset($this->QB->TEMPLATE->URL_ICON_192) && 
+			isset($this->QB->TEMPLATE->URL_ICON_96) && 
+			isset($this->QB->TEMPLATE->URL_ICON_32) && 
+			isset($this->QB->TEMPLATE->URL_ICON_16) && 
+			isset($this->QB->TEMPLATE->URL_ICON)
+		){
+			return true;
+		}
+		return false;	
+	}
+	
+	function template_theme_set(){
+		if(
+			isset($this->QB->TEMPLATE->BOOTSWATCH_THEME)
+		){
+			return true;	
+		}
+		return false;	
+	}
+	
+	function template_colors_set(){
+		if(
+			isset($this->QB->TEMPLATE->COLOR) && 
+			isset($this->QB->TEMPLATE->COLOR_DARK) && 
+			isset($this->QB->TEMPLATE->COLOR_LIGHT) && 
+
+			isset($this->QB->TEMPLATE->COLOR_DEFAULT) && 
+			isset($this->QB->TEMPLATE->COLOR_DEFAULT_DARK) && 
+			isset($this->QB->TEMPLATE->COLOR_DEFAULT_LIGHT) && 
+
+			isset($this->QB->TEMPLATE->COLOR_PRIMARY) && 
+			isset($this->QB->TEMPLATE->COLOR_PRIMARY_DARK) && 
+			isset($this->QB->TEMPLATE->COLOR_PRIMARY_LIGHT) && 
+
+			isset($this->QB->TEMPLATE->COLOR_SECONDARY) && 
+			isset($this->QB->TEMPLATE->COLOR_SECONDARY_DARK) && 
+			isset($this->QB->TEMPLATE->COLOR_SECONDARY_LIGHT) && 
+
+			isset($this->QB->TEMPLATE->COLOR_INFO) && 
+			isset($this->QB->TEMPLATE->COLOR_INFO_DARK) && 
+			isset($this->QB->TEMPLATE->COLOR_INFO_LIGHT) && 
+
+			isset($this->QB->TEMPLATE->COLOR_SUCCESS) && 
+			isset($this->QB->TEMPLATE->COLOR_SUCCESS_DARK) && 
+			isset($this->QB->TEMPLATE->COLOR_SUCCESS_LIGHT) && 
+
+			isset($this->QB->TEMPLATE->COLOR_WARNING) && 
+			isset($this->QB->TEMPLATE->COLOR_WARNING_DARK) && 
+			isset($this->QB->TEMPLATE->COLOR_WARNING_LIGHT) && 
+
+			isset($this->QB->TEMPLATE->COLOR_DANGER) && 
+			isset($this->QB->TEMPLATE->COLOR_DANGER_DARK) && 
+			isset($this->QB->TEMPLATE->COLOR_DANGER_LIGHT)
+		){
+			return true;
+		}
+		return false;	
+	}
+	
 	function icons(){
+		if($this->template_icons_set()){
 		?>
-			<!-- QuickBrowse Package - Icons -->
-			<link rel="icon" type="image/png" sizes="192x192" href="<?=$this->QB->ASSETS->get_asset('IMG-FAVICON-192');?>">
-			<link rel="icon" type="image/png" sizes="96x96" href="<?=$this->QB->ASSETS->get_asset('IMG-FAVICON-96');?>">
-			<link rel="icon" type="image/png" sizes="32x32" href="<?=$this->QB->ASSETS->get_asset('IMG-FAVICON-32');?>">
-			<link rel="icon" type="image/png" sizes="16x16" href="<?=$this->QB->ASSETS->get_asset('IMG-FAVICON-16');?>">
+		<!-- Template Custom Icons - QuickBrowse Icons -->
+		<link rel="icon" type="image/png" sizes="192x192" href="<?=$this->QB->TEMPLATE->URL_ICON_192;?>">
+		<link rel="icon" type="image/png" sizes="96x96" href="<?=$this->QB->TEMPLATE->URL_ICON_96;?>">
+		<link rel="icon" type="image/png" sizes="32x32" href="<?=$this->QB->TEMPLATE->URL_ICON_32;?>">
+		<link rel="icon" type="image/png" sizes="16x16" href="<?=$this->QB->TEMPLATE->URL_ICON_16;?>">
+		<link rel="icon" type="image/ico" href="<?=$this->QB->TEMPLATE->URL_ICON;?>">
 		<?php
+		}else{
+		?>
+		<!-- QuickBrowse Default Icons - QuickBrowse Icons -->
+		<link rel="icon" type="image/png" sizes="192x192" href="<?=$this->QB->ASSETS->get_asset('IMG-FAVICON-192');?>">
+		<link rel="icon" type="image/png" sizes="96x96" href="<?=$this->QB->ASSETS->get_asset('IMG-FAVICON-96');?>">
+		<link rel="icon" type="image/png" sizes="32x32" href="<?=$this->QB->ASSETS->get_asset('IMG-FAVICON-32');?>">
+		<link rel="icon" type="image/png" sizes="16x16" href="<?=$this->QB->ASSETS->get_asset('IMG-FAVICON-16');?>">
+		<?php
+		}
 	}
 
 	function css($THEME = 'BOOTSWATCH-SKETCHY'){
-		$this->bootstrap('css', $THEME);
+		$this->bootstrap('CSS', $THEME);
+		if($this->template_colors_set()){
 		?>
-		<!-- QuickBrowse Style Package - QuickBrowse CSS -->
+		<!-- Bootstrap Custom Styles - QuickBrowse CSS -->
+		<!--
+			Set these keys & values in the template`s config.php file,
+			The keys can be found on the default demo template in config.php
+			!! Values should be a #HEX String !!
+		-->
+		<style id="bootstrap-buttons">
+			/* DEFAULT BUTTON COLORS */
+			.btn-default,
+			a.btn-default
+			{
+				background-color: <?=$this->QB->TEMPLATE->COLOR_DEFAULT_DARK;?> !important;
+				border-color: <?=$this->QB->TEMPLATE->COLOR_DEFAULT_DARK;?> !important;
+				border-width: 0px;
+				border-style: solid;
+				color: #333 !important;
+			}
+
+			.btn-default.btn-outline,
+			a.btn-default.btn-outline
+			{
+				color: #eee !important;
+			}
+
+			.btn-default:hover,
+			.btn-default.active:hover,
+			.btn-default.focus:hover,
+
+			a.btn-default:hover,
+			a.btn-default.active:hover,
+			a.btn-default.focus:hover
+			{
+				background-color: <?=$this->QB->TEMPLATE->COLOR_DEFAULT_LIGHT;?> !important;
+				border-color: <?=$this->QB->TEMPLATE->COLOR_DEFAULT_LIGHT;?> !important;
+				-o-transition: all 0.4s;
+				transition: all 0.4s;
+				outline: <?=$this->QB->TEMPLATE->COLOR_DEFAULT;?> auto 0px;
+				color: #333 !important;
+			}
+
+			.btn-default:focus,
+			.btn-default.focus,
+			.btn-default.focus:active,
+			.btn-default:active,
+			.btn-default.active,
+			.btn-default.active:active,
+
+			a.btn-default:focus,
+			a.btn-default.focus,
+			a.btn-default.focus:active,
+			a.btn-default:active,
+			a.btn-default.active,
+			a.btn-default.active:focus
+			{
+				background-color: <?=$this->QB->TEMPLATE->COLOR_DEFAULT;?>;
+				background-image: radial-gradient(circle, <?=$this->QB->TEMPLATE->COLOR_DEFAULT_DARK;?> 10%, <?=$this->QB->TEMPLATE->COLOR_DEFAULT_LIGHT;?> 11%);
+				background-repeat: no-repeat;
+				background-size: 1000% 1000%;
+				border-color: <?=$this->QB->TEMPLATE->COLOR_DEFAULT_LIGHT;?> !important;
+				-o-transition: all 0.4s;
+				transition: all 0.4s;
+				outline: <?=$this->QB->TEMPLATE->COLOR_DEFAULT;?> auto 0px;
+				color: #333 !important;
+			}
+			/* DEFAULT BUTTON COLORS END */
+
+			/* PRIMARY BUTTON COLORS */
+			.btn-primary,
+			a.btn-primary
+			{
+				background-color: <?=$this->QB->TEMPLATE->COLOR_PRIMARY_DARK;?> !important;
+				border-color: <?=$this->QB->TEMPLATE->COLOR_PRIMARY_DARK;?> !important;
+				border-width: 0px;
+				border-style: solid;
+				color: #eee !important;
+			}
+
+			.btn-primary:hover,
+			.btn-primary.active:hover,
+			.btn-primary.focus:hover,
+
+			a.btn-primary:hover,
+			a.btn-primary.active:hover,
+			a.btn-primary.focus:hover
+			{
+				background-color: <?=$this->QB->TEMPLATE->COLOR_PRIMARY_LIGHT;?> !important;
+				border-color: <?=$this->QB->TEMPLATE->COLOR_PRIMARY_LIGHT;?> !important;
+				-o-transition: all 0.4s;
+				transition: all 0.4s;
+				outline: <?=$this->QB->TEMPLATE->COLOR_PRIMARY;?> auto 0px;
+				color: #eee !important;
+			}
+
+			.btn-primary:focus,
+			.btn-primary.focus,
+			.btn-primary.focus:active,
+			.btn-primary:active,
+			.btn-primary.active,
+			.btn-primary.active:active,
+
+			a.btn-primary:focus,
+			a.btn-primary.focus,
+			a.btn-primary.focus:active,
+			a.btn-primary:active,
+			a.btn-primary.active,
+			a.btn-primary.active:focus
+			{
+				background-color: <?=$this->QB->TEMPLATE->COLOR_PRIMARY;?>;
+				background-image: radial-gradient(circle, <?=$this->QB->TEMPLATE->COLOR_PRIMARY_DARK;?> 10%, <?=$this->QB->TEMPLATE->COLOR_PRIMARY_LIGHT;?> 11%);
+				background-repeat: no-repeat;
+				background-size: 1000% 1000%;
+				border-color: <?=$this->QB->TEMPLATE->COLOR_PRIMARY_LIGHT;?> !important;
+				-o-transition: all 0.4s;
+				transition: all 0.4s;
+				outline: <?=$this->QB->TEMPLATE->COLOR_PRIMARY;?> auto 0px;
+				color: #eee !important;
+			}
+			/* PRIMARY END */
+
+			/* SECONDARY */
+			.btn-secondary,
+			a.btn-secondary
+			{
+				background-color: <?=$this->QB->TEMPLATE->COLOR_SECONDARY_DARK;?> !important;
+				border-color: <?=$this->QB->TEMPLATE->COLOR_SECONDARY_DARK;?> !important;
+				border-width: 0px;
+				border-style: solid;
+				color: #eee !important;
+			}
+
+			.btn-secondary:hover,
+			.btn-secondary.active:hover,
+			.btn-secondary.focus:hover,
+
+			a.btn-secondary:hover,
+			a.btn-secondary.active:hover,
+			a.btn-secondary.focus:hover
+			{
+				background-color: <?=$this->QB->TEMPLATE->COLOR_SECONDARY_LIGHT;?> !important;
+				border-color: <?=$this->QB->TEMPLATE->COLOR_SECONDARY_LIGHT;?> !important;
+				-o-transition: all 0.4s;
+				transition: all 0.4s;
+				outline: <?=$this->QB->TEMPLATE->COLOR_SECONDARY;?> auto 0px;
+				color: #eee !important;
+			}
+
+			.btn-secondary:focus,
+			.btn-secondary.focus,
+			.btn-secondary.focus:active,
+			.btn-secondary:active,
+			.btn-secondary.active,
+			.btn-secondary.active:active,
+
+			a.btn-secondary:focus,
+			a.btn-secondary.focus,
+			a.btn-secondary.focus:active,
+			a.btn-secondary:active,
+			a.btn-secondary.active,
+			a.btn-secondary.active:focus
+			{
+				background-color: <?=$this->QB->TEMPLATE->COLOR_SECONDARY;?>;
+				background-image: radial-gradient(circle, <?=$this->QB->TEMPLATE->COLOR_SECONDARY_DARK;?> 10%, <?=$this->QB->TEMPLATE->COLOR_SECONDARY_LIGHT;?> 11%);
+				background-repeat: no-repeat;
+				background-size: 1000% 1000%;
+				border-color: <?=$this->QB->TEMPLATE->COLOR_SECONDARY_LIGHT;?> !important;
+				-o-transition: all 0.4s;
+				transition: all 0.4s;
+				outline: <?=$this->QB->TEMPLATE->COLOR_SECONDARY;?> auto 0px;
+				color: #eee !important;
+			}
+			/* SECONDARY BUTTON COLORS END */
+
+			/* INFO BUTTON COLORS */
+			.btn-info,
+			a.btn-info
+			{
+				background-color: <?=$this->QB->TEMPLATE->COLOR_INFO_DARK;?> !important;
+				border-color: <?=$this->QB->TEMPLATE->COLOR_INFO_DARK;?> !important;
+				border-width: 0px;
+				border-style: solid;
+				color: #eee !important;
+			}
+
+			.btn-info:hover,
+			.btn-info.active:hover,
+			.btn-info.focus:hover,
+
+			a.btn-info:hover,
+			a.btn-info.active:hover,
+			a.btn-info.focus:hover
+			{
+				background-color: <?=$this->QB->TEMPLATE->COLOR_INFO_LIGHT;?> !important;
+				border-color: <?=$this->QB->TEMPLATE->COLOR_INFO_LIGHT;?> !important;
+				-o-transition: all 0.4s;
+				transition: all 0.4s;
+				outline: <?=$this->QB->TEMPLATE->COLOR_INFO;?> auto 0px;
+				color: #eee !important;
+			}
+
+			.btn-info:focus,
+			.btn-info.focus,
+			.btn-info.focus:active,
+			.btn-info:active,
+			.btn-info.active,
+			.btn-info.active:active,
+
+			a.btn-info:focus,
+			a.btn-info.focus,
+			a.btn-info.focus:active,
+			a.btn-info:active,
+			a.btn-info.active,
+			a.btn-info.active:focus
+			{
+				background-color: <?=$this->QB->TEMPLATE->COLOR_INFO;?>;
+				background-image: radial-gradient(circle, <?=$this->QB->TEMPLATE->COLOR_INFO_DARK;?> 10%, <?=$this->QB->TEMPLATE->COLOR_INFO_LIGHT;?> 11%);
+				background-repeat: no-repeat;
+				background-size: 1000% 1000%;
+				border-color: <?=$this->QB->TEMPLATE->COLOR_INFO_LIGHT;?> !important;
+				-o-transition: all 0.4s;
+				transition: all 0.4s;
+				outline: <?=$this->QB->TEMPLATE->COLOR_INFO;?> auto 0px;
+				color: #eee !important;
+			}
+			/* INFO BUTTON COLORS END */
+
+			/* SUCCESS BUTTON COLORS */
+			.btn-success,
+			a.btn-success
+			{
+				background-color: <?=$this->QB->TEMPLATE->COLOR_SUCCESS_DARK;?> !important;
+				border-color: <?=$this->QB->TEMPLATE->COLOR_SUCCESS_DARK;?> !important;
+				border-width: 0px;
+				border-style: solid;
+				color: #eee !important;
+			}
+
+			.btn-success:hover,
+			.btn-success.active:hover,
+			.btn-success.focus:hover,
+
+			a.btn-success:hover,
+			a.btn-success.active:hover,
+			a.btn-success.focus:hover
+			{
+				background-color: <?=$this->QB->TEMPLATE->COLOR_SUCCESS_LIGHT;?> !important;
+				border-color: <?=$this->QB->TEMPLATE->COLOR_SUCCESS_LIGHT;?> !important;
+				-o-transition: all 0.4s;
+				transition: all 0.4s;
+				outline: <?=$this->QB->TEMPLATE->COLOR_SUCCESS;?> auto 0px;
+				color: #eee !important;
+			}
+
+			.btn-success:focus,
+			.btn-success.focus,
+			.btn-success.focus:active,
+			.btn-success:active,
+			.btn-success.active,
+			.btn-success.active:active,
+
+			a.btn-success:focus,
+			a.btn-success.focus,
+			a.btn-success.focus:active,
+			a.btn-success:active,
+			a.btn-success.active,
+			a.btn-success.active:focus
+			{
+				background-color: <?=$this->QB->TEMPLATE->COLOR_SUCCESS;?>;
+				background-image: radial-gradient(circle, <?=$this->QB->TEMPLATE->COLOR_SUCCESS_DARK;?> 10%, <?=$this->QB->TEMPLATE->COLOR_SUCCESS_LIGHT;?> 11%);
+				background-repeat: no-repeat;
+				background-size: 1000% 1000%;
+				border-color: <?=$this->QB->TEMPLATE->COLOR_SUCCESS_LIGHT;?> !important;
+				-o-transition: all 0.4s;
+				transition: all 0.4s;
+				outline: <?=$this->QB->TEMPLATE->COLOR_SUCCESS;?> auto 0px;
+				color: #eee !important;
+			}
+			/* SUCCESS BUTTON COLORS END */
+
+			/* WARNING BUTTON COLORS */
+			.btn-warning,
+			a.btn-warning
+			{
+				background-color: <?=$this->QB->TEMPLATE->COLOR_WARNING_DARK;?> !important;
+				border-color: <?=$this->QB->TEMPLATE->COLOR_WARNING_DARK;?> !important;
+				border-width: 0px;
+				border-style: solid;
+				color: #eee !important;
+			}
+
+			.btn-warning:hover,
+			.btn-warning.active:hover,
+			.btn-warning.focus:hover,
+
+			a.btn-warning:hover,
+			a.btn-warning.active:hover,
+			a.btn-warning.focus:hover
+			{
+				background-color: <?=$this->QB->TEMPLATE->COLOR_WARNING_LIGHT;?> !important;
+				border-color: <?=$this->QB->TEMPLATE->COLOR_WARNING_LIGHT;?> !important;
+				-o-transition: all 0.4s;
+				transition: all 0.4s;
+				outline: <?=$this->QB->TEMPLATE->COLOR_WARNING;?> auto 0px;
+				color: #eee !important;
+			}
+
+			.btn-warning:focus,
+			.btn-warning.focus,
+			.btn-warning.focus:active,
+			.btn-warning:active,
+			.btn-warning.active,
+			.btn-warning.active:active,
+
+			a.btn-warning:focus,
+			a.btn-warning.focus,
+			a.btn-warning.focus:active,
+			a.btn-warning:active,
+			a.btn-warning.active,
+			a.btn-warning.active:focus
+			{
+				background-color: <?=$this->QB->TEMPLATE->COLOR_WARNING;?>;
+				background-image: radial-gradient(circle, <?=$this->QB->TEMPLATE->COLOR_WARNING_DARK;?> 10%, <?=$this->QB->TEMPLATE->COLOR_WARNING_LIGHT;?> 11%);
+				background-repeat: no-repeat;
+				background-size: 1000% 1000%;
+				border-color: <?=$this->QB->TEMPLATE->COLOR_WARNING_LIGHT;?> !important;
+				-o-transition: all 0.4s;
+				transition: all 0.4s;
+				outline: <?=$this->QB->TEMPLATE->COLOR_WARNING;?> auto 0px;
+				color: #eee !important;
+			}
+			/* WARNING BUTTON COLORS END */
+
+			/* DANGER BUTTON COLORS */
+			.btn-danger,
+			a.btn-danger
+			{
+				background-color: <?=$this->QB->TEMPLATE->COLOR_DANGER_DARK;?> !important;
+				border-color: <?=$this->QB->TEMPLATE->COLOR_DANGER_DARK;?> !important;
+				border-width: 0px;
+				border-style: solid;
+				color: #eee !important;
+			}
+
+			.btn-danger:hover,
+			.btn-danger.active:hover,
+			.btn-danger.focus:hover,
+
+			a.btn-danger:hover,
+			a.btn-danger.active:hover,
+			a.btn-danger.focus:hover
+			{
+				background-color: <?=$this->QB->TEMPLATE->COLOR_DANGER_LIGHT;?> !important;
+				border-color: <?=$this->QB->TEMPLATE->COLOR_DANGER_LIGHT;?> !important;
+				-o-transition: all 0.4s;
+				transition: all 0.4s;
+				outline: <?=$this->QB->TEMPLATE->COLOR_DANGER;?> auto 0px;
+				color: #eee !important;
+			}
+
+			.btn-danger:focus,
+			.btn-danger.focus,
+			.btn-danger.focus:active,
+			.btn-danger:active,
+			.btn-danger.active,
+			.btn-danger.active:active,
+
+			a.btn-danger:focus,
+			a.btn-danger.focus,
+			a.btn-danger.focus:active,
+			a.btn-danger:active,
+			a.btn-danger.active,
+			a.btn-danger.active:focus
+			{
+				background-color: <?=$this->QB->TEMPLATE->COLOR_DANGER;?>;
+				background-image: radial-gradient(circle, <?=$this->QB->TEMPLATE->COLOR_DANGER_DARK;?> 10%, <?=$this->QB->TEMPLATE->COLOR_DANGER_LIGHT;?> 11%);
+				background-repeat: no-repeat;
+				background-size: 1000% 1000%;
+				border-color: <?=$this->QB->TEMPLATE->COLOR_DANGER_LIGHT;?> !important;
+				-o-transition: all 0.4s;
+				transition: all 0.4s;
+				outline: <?=$this->QB->TEMPLATE->COLOR_DANGER;?> auto 0px;
+				color: #eee !important;
+			}
+			/* DANGER BUTTON COLORS END */
+
+			/* DEFAULT BUTTON W/O COLORS */
+			.btn,
+			a.btn
+			{
+			  border-width: 2px;
+			  border-style: solid;
+			  color: #eee;
+			}
+
+			.btn+.btn,
+			a.btn+a.btn,
+			.btn,
+			a.btn
+			{
+				margin-top: 5px !important;
+			}
+
+			.btn-outline,
+			a.btn-outline
+			{
+			  background-color: rgba(255,255,255,0) !important;
+			  border-width: 2px;
+			  border-style: solid;
+			  color: initial;
+			}
+
+			.btn:hover,
+			.btn:focus,
+			.btn.focus,
+			.btn:active,
+			.btn.active,
+
+			a.btn:hover,
+			a.btn:focus,
+			a.btn.focus,
+			a.btn:active,
+			a.btn.active
+			{
+			  color: #eee;
+			  text-decoration: none;
+			}
+
+			.btn:hover,
+			.btn:focus,
+			.btn.focus,
+			.btn:active,
+			.btn.active,
+			.btn:focus,
+
+			a.btn:hover,
+			a.btn:focus,
+			a.btn.focus,
+			a.btn:active,
+			a.btn.active
+			{
+				touch-action: none;
+				cursor: pointer;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+			/* DEFAULT BUTTON W/O COLORS END */
+		</style>
+		<?php
+		}
+		?>
+		<!-- QuickBrowse`s Extension Style Sheets - QuickBrowse CSS -->
+		<!--
+			These stylesheets are meant to be a extension on bootstrap or your own stylesheets
+			and add quick to use classes like class="column with-3 height-50 center-2d-old".
+			
+			These classes and their functionality can be found in the documentation and in the
+			example demo template that's included when downloading QuickBrowse.
+		-->
 		<link type="text/css" href="<?=$this->QB->ASSETS->get_asset('CSS-ANIMATE');?>" rel="stylesheet">
 		<link type="text/css" href="<?=$this->QB->ASSETS->get_asset('CSS-RESPONSIVE');?>" rel="stylesheet">
 		<link type="text/css" href="<?=$this->QB->ASSETS->get_asset('CSS-UTILITY');?>" rel="stylesheet">
@@ -277,11 +808,22 @@ class Package{
 		$QB_DATA = $this->QB->client_json(isset($this->QB->USER));
 		if(is_array(json_decode($QB_DATA, true))){
 		?>
-			<!-- QuickBrowse Javascript Package - QuickBrowse JS -->
-			<script type="application/javascript" src="<?=$this->QB->ASSETS->get_asset('JS-CLIENT');?>"></script>
-			<script type="application/javascript">new QB_CLIENT().Init(<?=$QB_DATA;?>);</script>
-			<!-- QuickBrowse Component - Scroll Animator wow.js -->
-			<script type="application/javascript" src="<?=$this->QB->ASSETS->get_asset('JS-WOW');?>"></script>
+		<!-- QuickBrowse Javascript Component - QuickBrowse JS Client + Data -->
+		<!--
+			This Javascript component is build to provide client side variable's from the QuickBrowse Framework.
+			The Objects within QuickBrowse get converted from PHP to Javascript JSON Arrays.
+
+			You can use console.log(QuickBrowseJS.Data); to log the QuickBrowse Data (Javscript Object a.k.a. JSON) that
+			is taken from the Server Objects that exist in QuickBrowse.
+
+			If you have added instances to QuickBrowse, Make sure you've added a third boolean parameter that sets the instance
+			to a Secured State that disables the Client to get its Properties and won't give any Values to the user.
+		-->
+		<script type="application/javascript" src="<?=$this->QB->ASSETS->get_asset('JS-CLIENT');?>"></script>
+		<script type="application/javascript">var QuickBrowseJS = new QB_CLIENT().Init(<?=$QB_DATA;?>);</script>
+		
+		<!-- QuickBrowse Javascript Component - Scroll Animator `wow.js` -->
+		<script type="application/javascript" src="<?=$this->QB->ASSETS->get_asset('JS-WOW');?>"></script>
 		<?php
 		}
 		unset($QB_DATA);
@@ -289,14 +831,15 @@ class Package{
 
 	function meta($title = 'Website build with ease because of https://QuickBrow.se', $description = 'Visit https://QuickBrow.se/get-started for more information.', $author = 'doOnline.nl', $theme_color = '#dc3545'){
 		?>
-			<!-- QuickBrowse Package - Metadata SEO -->
-			<meta charset="utf-8">
-			<title><?=$title;?></title>
-			<meta name="description" content="<?=$description;?>">
-			<meta name="author" content="<?=$author;?>">
-			<!-- QuickBrowse Package - Mobile Options -->
-			<meta name="theme-color" content="<?=$theme_color;?>">
-			<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!-- QuickBrowse Package - Metadata SEO -->
+		<meta charset="utf-8">
+		<title><?=$title;?></title>
+		<meta name="description" content="<?=$description;?>">
+		<meta name="author" content="<?=$author;?>">
+		
+		<!-- QuickBrowse Package - Mobile Options -->
+		<meta name="theme-color" content="<?=$theme_color;?>">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<?php
 	}
 
@@ -304,28 +847,29 @@ class Package{
 		switch(strtoupper($filetype)){
 			case 'CSS':
 				?>
-					<!-- QuickBrowse Bootstrap Package - Main CSS -->
-					<link type="text/css" href="<?=$this->QB->ASSETS->get_asset('CSS-BOOTSTRAP');?>" rel="stylesheet">
-					<!-- QuickBrowse Bootstrap Package - Navbar CSS -->
-					<link type="text/css" href="<?=$this->QB->ASSETS->get_asset('CSS-BOOTSTRAP-NAVBAR');?>" rel="stylesheet">
+				<!-- QuickBrowse Bootstrap Package - Bootstrap CSS -->
+				<link type="text/css" href="<?=$this->QB->ASSETS->get_asset('CSS-BOOTSTRAP');?>" rel="stylesheet">
+				<!-- QuickBrowse Bootstrap Package - Bootstrap add-on Navbar CSS -->
+				<link type="text/css" href="<?=$this->QB->ASSETS->get_asset('CSS-BOOTSTRAP-NAVBAR');?>" rel="stylesheet">
 				<?php
 				if($theme != 'none'){
 				?>
-					<!-- QuickBrowse Bootstrap Package - Bootswatch CSS -->
-					<link type="text/css" href="<?=$this->QB->ASSETS->get_asset(strtoupper($theme));?>" rel="stylesheet">
+				<!-- QuickBrowse Bootstrap Package - Bootswatch CSS -->
+				<link type="text/css" href="<?=$this->QB->ASSETS->get_asset(strtoupper($theme));?>" rel="stylesheet">
 				<?php
 				}
 			break;
 
 			case 'JS':
 				?>
-					<!-- QuickBrowse Bootstrap Package - JQuery JS -->
-					<script type="application/javascript" src="<?=$this->QB->ASSETS->get_asset('JS-JQUERY');?>"></script>
-					<script type="application/javascript" src="<?=$this->QB->ASSETS->get_asset('JS-JQUERY-EASING');?>"></script>
-					<!-- QuickBrowse Bootstrap Package - Main JS -->
-					<script type="application/javascript" src="<?=$this->QB->ASSETS->get_asset('JS-BOOTSTRAP');?>"></script>
-					<!-- QuickBrowse Bootstrap Package - Navbar JS -->
-					<script type="application/javascript" src="<?=$this->QB->ASSETS->get_asset('JS-BOOTSTRAP-NAVBAR');?>"></script>
+				<!-- QuickBrowse Bootstrap Package - JQuery JS -->
+				<script type="application/javascript" src="<?=$this->QB->ASSETS->get_asset('JS-JQUERY');?>"></script>
+				<script type="application/javascript" src="<?=$this->QB->ASSETS->get_asset('JS-JQUERY-EASING');?>"></script>
+				
+				<!-- QuickBrowse Bootstrap Package - Bootstrap JS -->
+				<script type="application/javascript" src="<?=$this->QB->ASSETS->get_asset('JS-BOOTSTRAP');?>"></script>
+				<!-- QuickBrowse Bootstrap Package - Bootstrap add-on Navbar JS -->
+				<script type="application/javascript" src="<?=$this->QB->ASSETS->get_asset('JS-BOOTSTRAP-NAVBAR');?>"></script>
 				<?php
 			break;
 		}
@@ -348,7 +892,7 @@ class Package{
 					<section id="notify-contact-<?=rand(0, 100);?>" class="<?=$banner_class;?> py-5">
 						<div class="container text-center">
 							<h3 class="lead my-5 <?=$text_class;?>"><span class="my-3 my-md-0">Want to reach <a href="<?=$this->QB->TEMPLATE->AUTHOR_URL;?>" class="text-light font-weight-bold"><?=$this->QB->TEMPLATE->AUTHOR;?></a>? you might get to know us better.</span>
-																	<span class="d-none d-md-inline my-3 my-md-0">Contact us with our contact form @ <a href="<?=$this->QB->TEMPLATE->AUTHOR_URL;?>/contact?refferal=<?=urlencode($this->QB->DOMAIN);?>" class="text-light font-weight-bold">Contact</a>.</h3>
+							<span class="d-none d-md-inline my-3 my-md-0">Contact us with our contact form @ <a href="<?=$this->QB->TEMPLATE->AUTHOR_URL;?>/contact?refferal=<?=urlencode($this->QB->DOMAIN);?>" class="text-light font-weight-bold">Contact</a>.</h3>
 						</div>
 					</section>
 					<?php
