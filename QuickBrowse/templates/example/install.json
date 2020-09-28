@@ -2,19 +2,57 @@
 	"SETTINGS":
 	{
 		
-		"VERSION": "20.08.20",
+		"VERSION": "28.09.20",
 		"RELEASE": "3.5.0",
-		"TITLE": "QuickBrowse Example Template",
+		"TITLE": "QuickBrowse Example: Demo Template",
 		"DESCRIPTION": "This is an example template for QuickBrowse, use $QB->TEMPLATE->TITLE to get the title for this template.",
 
 		"AUTHOR": "D. van Dooijeweert",
-		"AUTHOR_URL": "http://doonline.nl/download/example-template?ext=zip",
+		"AUTHOR_URL": "https://doonline.nl/",
 		"EMAIL": "contact@doonline.nl",
-
-		"INFO": "All settings above are REQUIRED... Because QuickBrowse uses them to call for some data live template version.",
-		"MORE": "The setting 'INFO', '', '' and everything below are NOT REQUIRED for QuickBrowse.",
-		"ALSO": "There's a SETTINGS part and REQUIRED part to this install.json file, Make sure you use appropriate settings for the 'REQUIRED' part.",
-		"DOWNLOAD": "http://quickbrow.se/download/example-template?ext=zip"
+		
+		"URL_ICON_192": "./QuickBrowse/assets/img/icon/favicon-192.png",
+		"URL_ICON_96": "./QuickBrowse/assets/img/icon/favicon-96.png",
+		"URL_ICON_32": "./QuickBrowse/assets/img/icon/favicon-32.png",
+		"URL_ICON_16": "./QuickBrowse/assets/img/icon/favicon-16.png",
+		"URL_ICON": "./QuickBrowse/assets/img/icon/favicon.ico",
+		
+		"COLOR_DARK": "#6b4686",
+		"COLOR_LIGHT": "#6e589f",
+		"COLOR": "#6e589f",
+		
+		"COLOR_DEFAULT_DARK": "#eeeeee",
+		"COLOR_DEFAULT_LIGHT": "#ffffff",
+		"COLOR_DEFAULT": "#ffffff",
+		
+		"COLOR_PRIMARY_DARK": "#6b4686",
+		"COLOR_PRIMARY_LIGHT": "#6e589f",
+		"COLOR_PRIMARY": "#6e589f",
+		
+		"COLOR_SECONDARY_DARK": "#d53970",
+		"COLOR_SECONDARY_LIGHT": "#bb3e6c",
+		"COLOR_SECONDARY": "#bb3e6cf",
+		
+		"COLOR_INFO_DARK": "#3987d5",
+		"COLOR_INFO_LIGHT": "#3e92bb",
+		"COLOR_INFO": "#3e92bb",
+		
+		"COLOR_SUCCESS_DARK": "#3ebb61",
+		"COLOR_SUCCESS_LIGHT": "#39d564",
+		"COLOR_SUCCESS": "#39d564",
+		
+		"COLOR_WARNING_DARK": "#bb973e",
+		"COLOR_WARNING_LIGHT": "#d5b139",
+		"COLOR_WARNING": "#d5b139",
+		
+		"COLOR_DANGER_DARK": "#d5393b",
+		"COLOR_DANGER_LIGHT": "#bb3f3e",
+		"COLOR_DANGER": "#bb3f3e",
+		
+		"INFO": "All settings above are REQUIRED... Because QuickBrowse uses them to call for some data.",
+		"MORE": "The setting 'INFO', 'MORE', 'ALSO' and 'DOWNLOAD' are NOT REQUIRED for QuickBrowse.",
+		"ALSO": "Some keys & values are REQUIRED in this install.json file, Make sure you use appropriate settings for the 'REQUIRED' keys.",
+		"DOWNLOAD": "https://quickbrow.se/download/example-template?ext=zip"
 		
 	},
 	"REQUIRED": {
