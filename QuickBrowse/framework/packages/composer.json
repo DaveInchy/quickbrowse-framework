@@ -11,7 +11,7 @@
         }
     ],
 	"config": {
-		"vendor-dir": "lib",
+		"vendor-dir": "./lib",
 		"optimize-autoloader": true
 	},
 	"prefer-stable": true
